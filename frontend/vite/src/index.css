@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss"; 
+
+@theme {
+  /* Font Families */
+  --font-sans: "Poppins", sans-serif;
+  --font-handwriting: "Merienda", cursive;
+
+  /* Primary Colors */
+  --color-primary: oklch(0.6 0.2 240); /* Blue */
+  --color-secondary: oklch(0.7 0.15 120); /* Green */
+  --color-accent: oklch(0.8 0.25 340); /* Pink */
+
+  /* Background & Text Colors */
+  --color-bg: oklch(0.98 0.01 240); /* Light background */
+  --color-text: oklch(0.1 0.01 240); /* Dark text */
+
+  /* Container Padding */
+  --spacing-container: 1rem;
+  --spacing-container-sm: 2rem;
+  --spacing-container-lg: 4rem;
+  --spacing-container-xl: 5rem;
+  --spacing-container-2xl: 6rem;
+
+  /* Shadows */
+  --shadow-text: -6px 6px 10px rgba(0, 0, 0, 0.4);
+  --shadow-img: -6px 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+
+  .text-shadow {
+    text-shadow: var(--shadow-text);
+  }
+}
+
+@layer utilities {
+  .img-shadow {
+    filter: drop-shadow(var(--shadow-img));
+  }
+}
